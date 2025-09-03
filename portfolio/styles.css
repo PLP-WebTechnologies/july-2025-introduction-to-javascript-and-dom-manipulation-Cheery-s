@@ -1,0 +1,188 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Grid Layout - Desktop First */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "content sidebar"
+    "contact contact"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.site-header {
+  grid-area: header;
+  background-color: rgb(128, 2, 128);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-nav {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+/* Navigation with Flexbox */
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: rgb(128, 2, 128);
+  padding: 10px;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Content Cards */
+.content-card {
+  background: white;
+  border: 2px solid #ddd;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+h2{color: purple;}
+.skill-grid a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Project Grid */
+.content-card .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.project-card {
+  background: rgb(142, 41, 185);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.project-card a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .project-card {
+  margin: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+button {
+  margin-top: 5px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  background: rgb(128, 2, 128);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(172, 60, 220);
+}
+
+.site-footer {
+  grid-area: footer;
+  background: rgb(128, 2, 128);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1023px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "contact"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav li {
+    margin: 10px 0;
+  }
+}

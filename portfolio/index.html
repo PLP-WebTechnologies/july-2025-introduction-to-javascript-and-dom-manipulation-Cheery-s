@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn the basics of CSS, including selector, properties,Box-model and responsive design techniques.">
+  <meta name="keywords" content="CSS, web design, responsive design, styling, web development">
+  <meta name="author" content="Jinadu Jadesola">
+  <title>Jinadu Jadesola | Responsive Portfolio</title>
+  <link rel="stylesheet" href="./styles.css" /> 
+  
+  
+</head>
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="site-header">
+      <h1>Jinadu Jadesola</h1>
+      <p>Frontend Developer | CSS Layouts & RWD Demo</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="about" class="content-card">
+        <h2>About Me</h2>
+        <p>
+          Hi! I’m Jadesola, a frontend developer passionate about building responsive, 
+          user-friendly websites. This portfolio demonstrates my use of CSS Grid, Flexbox, 
+          and media queries.
+        </p>
+      </section>
+
+      <section id="projects" class="content-card">
+        <h2>Projects</h2>
+        <ul class="project-grid">
+         
+        </ul>
+      </section>
+      <div id="output"></div>
+
+      <section id="skills" class="content-card">
+        <h2>Skills</h2>
+
+        <ul class="skill-grid">
+          
+        </ul>
+
+      </section>
+      <div id="output"></div>
+    </main>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>
+        Quick links, news, or extra content can go here. On smaller screens, this moves under the main content.
+      </p>
+
+      <h2>Projects</h2>
+      <ul class="project-grid">
+        
+      </ul>
+    </aside>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-card">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2025 Jinadu Jadesola | Responsive Portfolio</p>
+    </footer>
+    <script src="./script.js"></script>
+  </div>
+</body>
+</html>
